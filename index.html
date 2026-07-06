@@ -5,32 +5,181 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tomas Valcarcel</title>
     <link rel="stylesheet" href="style-personal.css">
+    <style>
+        nav {
+            margin-top: 15px;
+        }
+        nav a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 8px 16px;
+            border-radius: 6px;
+            transition: 0.3s;
+            display: inline-block;
+        }
+        nav a:hover {
+            background-color: #264653;
+        }
+ 
+        .grid-proyectos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+            margin-top: 15px;
+        }
+ 
+        .card-proyecto {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.07);
+            transition: 0.3s;
+            text-align: left;
+        }
+ 
+        .card-proyecto:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+        }
+ 
+        .card-proyecto .franja {
+            background-color: #264653;
+            color: white;
+            padding: 16px 18px;
+        }
+ 
+        .card-proyecto .franja h3 {
+            font-size: 1rem;
+            color: white;
+            border: none;
+            padding: 0;
+            margin: 0;
+        }
+ 
+        .card-proyecto .cuerpo {
+            padding: 16px 18px;
+        }
+ 
+        .card-proyecto .cuerpo p {
+            font-size: 0.9rem;
+            color: #555;
+            margin-bottom: 12px;
+        }
+ 
+        .btn-ver {
+            display: inline-block;
+            background-color: #2a9d8f;
+            color: white;
+            padding: 7px 16px;
+            border-radius: 5px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+ 
+        .btn-ver:hover {
+            background-color: #264653;
+        }
+ 
+        .datos-contacto {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px 25px;
+            margin-top: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.07);
+        }
+ 
+        .datos-contacto p {
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+ 
+        .seccion {
+            margin-bottom: 50px;
+        }
+    </style>
 </head>
 <body>
-
-    <header>
-        <h1>Tomas Valcarcel</h1>
-        <p>Estudiante de Marketing</p>
-    </header>
-
-    <main>
-        <section class="bio">
-            <h2>Sobre mí</h2>
-            <p>Hola, soy estudiante y este es mi sitio web personal desarrollado para la materia de desarrollo web. Aquí presento mi infografía y mis datos principales.</p>
-        </section>
-
-        <section class="infografia">
-            <h2>Mi Infografía</h2>
-            <div class="img-container">
-              <img src="img/descarga.png" alt="Tomas Valcarcel Infografía">  
+ 
+<header>
+    <h1>Tomas Valcarcel</h1>
+    <p>Estudiante de Marketing</p>
+    <nav>
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#contacto">Contacto</a>
+        <a href="https://tomasvalcarcel.github.io/proyectoconsultoravarlo/" target="_blank">Consultora Varlo</a>
+    </nav>
+</header>
+ 
+<main>
+ 
+    <section class="bio seccion" id="sobre-mi">
+        <h2>Sobre mí</h2>
+        <p>Hola, soy Tomas Valcarcel, estudiante de Marketing. Este es mi sitio web personal desarrollado para la materia de Desarrollo Web. Aquí presentó mis proyectos, mi infografía y mis datos de contacto.</p>
+    </section>
+ 
+    <section class="infografia seccion">
+        <h2>Mi Infografía</h2>
+        <div class="img-container">
+            <img src="img/descarga.png" alt="Tomas Valcarcel Infografía">
+        </div>
+    </section>
+ 
+    <section class="seccion" id="proyectos">
+        <h2>Proyectos</h2>
+        <div class="grid-proyectos">
+            <div class="card-proyecto">
+                <div class="franja">
+                    <h3>🚌 Terminal Liniers</h3>
+                </div>
+                <div class="cuerpo">
+                    <p>Portal web del Centro de Transporte de Liniers. Incluye consulta de viajes con JavaScript, mapa de la terminal y chatbot de servicios.</p>
+                    <a href="https://tomasvalcarcel.github.io/centro-transporte/" target="_blank" class="btn-ver">Ver proyecto →</a>
+                </div>
             </div>
-        </section>
-    </main>
-
-    <footer>
-        <p>© 2026 - Creado por Tomas Valcarcel</p>
-        <p>Contacto: tomas.valcarcel@gmail.com</p>
-    </footer>
-
+            <div class="card-proyecto">
+                <div class="franja">
+                    <h3>🚍 Línea 109</h3>
+                </div>
+                <div class="cuerpo">
+                    <p>Sitio web del colectivo Línea 109, conectando Liniers con el Correo Central. Recorrido, ramales y contacto.</p>
+                    <a href="https://tomasvalcarcel.github.io/Linea109/" target="_blank" class="btn-ver">Ver proyecto →</a>
+                </div>
+            </div>
+            <div class="card-proyecto">
+                <div class="franja">
+                    <h3>🏢 Consultora Varlo</h3>
+                </div>
+                <div class="cuerpo">
+                    <p>Sitio web de la consultora digital Varlo, con presentación de servicios, proyectos e integrantes del equipo.</p>
+                    <a href="https://tomasvalcarcel.github.io/proyectoconsultoravarlo/" target="_blank" class="btn-ver">Ver proyecto →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+ 
+    <section class="seccion" id="contacto">
+        <h2>Contacto</h2>
+        <div class="datos-contacto">
+            <p>📧 tomas.valcarcel@gmail.com</p>
+            <p>🏙️ Buenos Aires, Argentina</p>
+            <p>🎓 Estudiante de Marketing — Desarrollo Web</p>
+        </div>
+    </section>
+ 
+</main>
+ 
+<footer>
+    <p>© 2026 - Creado por Tomas Valcarcel</p>
+    <p>Contacto: tomas.valcarcel@gmail.com</p>
+</footer>
+ 
 </body>
 </html>
+ 
